@@ -17,7 +17,8 @@
     "build:server": "cross-env NODE_ENV=production babel ./src/server --out-dir ./src/dist-server",
     "clean": "rimraf ./src/client/.next",
     "start": "npm run clean && npm run build && cross-env NODE_ENV=production node ./src/dist-server",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export src/client"
   },
   "dependencies": {
     "classnames": "^2.3.1",
