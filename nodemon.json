@@ -1,9 +1,0 @@
-{
-    "verbose": true,
-    "ext": "js json",
-    "ignore": ["node_modules", "src/client"],
-    "events": {
-        "start": "clear"
-      }
-  }
-  
