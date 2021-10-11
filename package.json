@@ -1,5 +1,6 @@
 {
   "name": "lottery_game",
+  "main": "index.js",
   "version": "0.1.0",
   "private": true,
   "engines": {
