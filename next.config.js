@@ -1,4 +1,9 @@
 const path = require('path');
+const debug = process.env.NODE_ENV !== "deploy";
+let assetPrefix = [] 
+  if(!debug){
+    assetPrefix = {assetPrefix:  'https://kaitouneko.github.io/lottery_game'}
+  }
 
 const configOption = {
   reactStrictMode: true,
@@ -19,4 +24,8 @@ const configOption = {
   }
 };
 
-module.exports = configOption;
+
+module.exports = {
+  ...configOption,
+  ...assetPrefix
+}
