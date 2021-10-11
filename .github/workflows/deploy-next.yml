@@ -36,4 +36,5 @@ jobs:
         with:
           branch: gh-pages
           folder: src/client/out
+          deploy_key: ${{ secrets.lottery }}
 
