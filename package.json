@@ -1,12 +1,12 @@
 {
   "name": "lottery_game",
   "main": "index.js",
+  "homepage": "https://kaitouneko.github.io/lottery_game",
   "version": "0.1.0",
   "private": true,
   "engines": {
     "node": ">=12.0.0"
   },
-  "homepage": "https://kaitouneko.github.io/lottery_game/",
   "repository": {
     "type": "git",
     "url": "https://github.com/KaitouNeko/lottery_game#readme"
@@ -15,7 +15,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon node ./src/server",
-    "build": "cross-env PUBLIC_URL=https://kaitouneko.github.io/lottery_game/ cross-env NODE_ENV=production next build ./src/client && npm run build:server",
+    "build": "cross-env NODE_ENV=production next build ./src/client && npm run build:server",
     "build:server": "cross-env NODE_ENV=production babel ./src/server --out-dir ./src/dist-server",
     "clean": "rimraf ./src/client/.next",
     "start": "npm run clean && npm run build && cross-env NODE_ENV=production node ./src/dist-server",
