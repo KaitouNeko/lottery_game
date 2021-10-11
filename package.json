@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "homepage": ".",
+  "homepage": "https://kaitouneko.github.io/lottery_game/",
   "repository": {
     "type": "git",
     "url": "https://github.com/KaitouNeko/lottery_game#readme"
