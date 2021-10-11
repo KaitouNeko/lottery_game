@@ -5,9 +5,10 @@
   "engines": {
     "node": ">=12.0.0"
   },
+  "homepage": ".",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/KaitouNeko/lottery_game#readme"
   },
   "author": "Kiki",
   "license": "ISC",
