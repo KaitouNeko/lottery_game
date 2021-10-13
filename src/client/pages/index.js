@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useState } from 'react'
 
 // redux
 import { useDispatch } from 'react-redux';
@@ -10,7 +10,6 @@ import {
   Layout, Navbar, Timer, LotteryDialog, Button, WinnerDialog
 } from '@components'
 import useGetMemberList from '@hooks/useGetMemberList';
-import useToggleDialog from '@hooks/useToggleDialog';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,12 +17,14 @@ const Home = () => {
   const {
     loading, error, data, limit
   } = useGetMemberList()
-  const { isVisible, handleToggleModalShowUp: openLotteryDialog } = useToggleDialog();
-  const {
-    isVisible: isWinnerVisible,
-    handleToggleModalShowUp: openWinnerDialog,
-    setIsVisible
-  } = useToggleDialog();
+  const [isVisible, setIsVisible] = useState(false)
+  const [isWinnerVisible, setIsWinnerVisible] = useState(false)
+  const openLotteryDialog = () => {
+    setIsVisible(!isVisible)
+  }
+  const openWinnerDialog = () => {
+    setIsWinnerVisible(!isWinnerVisible)
+  }
 
   const RandomWinner = useCallback((maxRange) => {
     const winnerKey = getRandomInt(0, maxRange);
@@ -47,13 +48,11 @@ const Home = () => {
 
   return (
     <Layout>
-      <>
         <Timer openWinnerDialog={setIsVisible} isWinnerVisible />
         <Navbar />
         <Button text='Member List' onClick={openLotteryDialog} />
         <LotteryDialog title='Member List' onClick={openLotteryDialog} isVisible={isVisible} />
         <WinnerDialog title='WANTED' onClick={handleWinnerClose} isVisible={isWinnerVisible} />
-      </>
     </Layout>
   )
 }

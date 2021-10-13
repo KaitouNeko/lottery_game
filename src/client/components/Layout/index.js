@@ -19,7 +19,10 @@ const Layout = ({
 Layout.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
-  children: PropTypes.element.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+]).isRequired
 };
 Layout.defaultProps = {
   title: 'Create Next App',
