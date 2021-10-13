@@ -2,12 +2,7 @@
 
 ## Installation
 
-requires [NVM](https://github.com/nvm-sh/nvm)
-```sh
-nvm install v.12.13.0
-nvm use v.12.13.0
-```
-or requires [Node.js](https://nodejs.org/) v12+ to run.
+requires [Node.js](https://nodejs.org/) v12+ to run.
 
 ## Development
 ```sh
