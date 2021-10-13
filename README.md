@@ -7,7 +7,7 @@ requires [Node.js](https://nodejs.org/) v12+ to run.
 ## Development
 ```sh
 npm install
-node run dev
+npm run dev
 ```
 
 ## production
